@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utilities</title>
+    <link
+      rel="stylesheet"
+      href="/Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.css"
+    />
+    <style>
+      /* regles css perso */
+
+      .bg-danger {
+        /* pour dementir la couleur bg-danger, je dois appliquer le drapeau !important (car il est présent aussi dans bootstrap) */
+        background-color: tomato !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Utilities</h1>
+
+    <h2>Couleurs</h2>
+
+    <div class="bg-danger text-white">
+      Un texte dans ma div
+      <a href="https://getbootstrap.com/docs/5.3/utilities/background/"
+        >Couleur de fond</a
+      >
+      <a href="https://getbootstrap.com/docs/5.3/utilities/colors/"
+        >Couleur de texte</a
+      >
+    </div>
+
+    <h2>Contours</h2>
+    <div
+      class="border border-success border-opacity-50 border-3 rounded m-md-3 p-2"
+    >
+      <a href="https://getbootstrap.com/docs/5.3/utilities/borders">Contours</a>
+    </div>
+
+    <h2>Espacement et taille</h2>
+
+    <!-- Modifier cette div pour lui appliquer une largeur de 50%
+    lui donner un background color de votre choix
+    l'autocentrer (margin: '4' auto) 
+    padding: '3' '4' '2'
+    -->
+    <div class="bg-primary w-50 mx-auto my-2 my-md-5 pt-3 px-4 pb-2">
+      <a
+        class="text-white"
+        href="https://getbootstrap.com/docs/5.3/utilities/spacing/"
+        >Espacements</a
+      >
+      <a
+        class="text-white"
+        href="https://getbootstrap.com/docs/5.3/utilities/sizing/"
+        >tailles</a
+      >
+    </div>
+
+    <h2>Display</h2>
+
+    <!-- xs : visible
+      sm: invisible
+      md: invisible
+      lg: visible
+      xl: visible
+      xxl : visible 
+  -->
+    <div class="bg-primary m-5 w-50 p-3 d-sm-none d-lg-block">
+      <a
+        class="text-white"
+        href="https://getbootstrap.com/docs/5.3/utilities/display/"
+        >Element disparait en sm reapparait en lg</a
+      >
+    </div>
+    <div class="bg-secondary m-5 w-50 p-3 d-none d-sm-block d-lg-none">
+      <a
+        class="text-white"
+        href="https://getbootstrap.com/docs/5.3/utilities/display/"
+        >Element apparait en sm et disparait en lg</a
+      >
+    </div>
+
+    <h2>Flexbox</h2>
+
+    <!-- 
+      flex-direction -> row, column, row-reverse, column-reverse
+      justify-content -> flex-start, flex-end, center, space-around/between/evenly
+      align-items -> flex-start, flex-end, center
+      flex-wrap -> nowrap / wrap
+  -->
+
+    <div
+      class="d-flex border border-4 border-primary w-75 my-5 mx-auto flex-column align-items-center flex-md-row justify-content-md-between justify-content-lg-evenly"
+      style="height: 400px"
+    >
+      <div class="w-25 bg-danger" style="height: 100px">
+        <a
+          class="text-white"
+          href="https://getbootstrap.com/docs/5.3/utilities/flex/#align-items"
+          >Doc flex</a
+        >
+      </div>
+      <div
+        class="w-25 bg-warning d-flex justify-content-center align-items-center d-lg-block"
+        style="height: 100px"
+      >
+        2
+      </div>
+      <div class="w-25 bg-success" style="height: 100px">3</div>
+    </div>
+
+    <h3>Utilisation eventuelle dans une grille</h3>
+
+    <div class="container border border-4 border-primary my-5">
+      <div
+        class="row justify-content-evenly align-items-center"
+        style="height: 100px"
+      >
+        <div class="col-5 bg-danger">1</div>
+        <div class="col-5 bg-success">2</div>
+      </div>
+    </div>
+
+    <h2>Positions</h2>
+    <p>
+      <a href="https://getbootstrap.com/docs/5.3/utilities/position/"
+        >static / Relative / absolute / fixed / sticky</a
+      >
+    </p>
+
+    <div class="bg-danger w-25 p-4 position-relative z-n1" style="bottom: 30px">
+      Position relative (par rapport a la position d'origine)
+      <a href="https://getbootstrap.com/docs/5.3/utilities/z-index/">
+        avec z-index</a
+      >
+    </div>
+
+    <div class="bg-info w-25 p-4 position-absolute end-0">
+      Position absolute (par rapport au body)
+    </div>
+
+    <header class="bg-success w-100 position-fixed top-0 start-0">
+      Position fixed (reste placé quel que soit le defilement)
+    </header>
+
+    <div class="bg-warning w-25 p-5 position-sticky" style="top: 24px">
+      Position sticky
+    </div>
+
+    <div
+      class="bg-info border border-danger w-50 m-5 position-relative overflow-hidden"
+      style="height: 200px"
+    >
+      <a href="#">
+        <img
+          class="w-100"
+          src="https://nextformation.com/app/uploads/2024/04/plan-rennes.png"
+          alt=""
+        />
+      </a>
+      <div
+        class="bg-success w-25 position-absolute start-50 top-50 translate-middle"
+      >
+        Enfant absolute
+      </div>
+    </div>
+    <div style="height: 800px"></div>
+
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

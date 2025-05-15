@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grille bootstrap</title>
+    <!-- chargement de boostrap -->
+    <link
+      rel="stylesheet"
+      href="/Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.css"
+    />
+    <!-- chargement de mon style perso -->
+    <link rel="stylesheet" href="grille.css" />
+  </head>
+  <body>
+    <h1>Grille bootstrap</h1>
+
+    <p>
+      Bootstrap en terme de grille fonctionne systematiquement avec le trio
+      suivant :<br />
+      - un conteneur (definir la largeur du contenu par rapport au body)<br />
+      - une ligne (row) (donne le flex aux enfants directs)<br />
+      - à l'interieur de la ligne : une ou des colonnes (col)
+    </p>
+
+    <h2>Conteneurs</h2>
+    <p>Bootstrap permet d'utiliser le type de contenur que je desire</p>
+
+    <div class="container-fluid contour">Conteneur fluide (100% de large)</div>
+    <div class="container contour">Conteneur adaptatif</div>
+    <div class="container-lg contour">
+      Conteneur fluide puis adaptatif en large
+    </div>
+
+    <h2>Colonnes</h2>
+    <h3>Colonnes simples</h3>
+    <p>
+      Une colonne simple (.col) (toujours à l'interieur d'une classe .row)
+      partage tout l'espace disponible et ne possède pas de comportement
+      responsive
+    </p>
+
+    <div class="container contour">
+      <!-- creer une classe .row pour conferer le flex aux colonnes -->
+      <div class="row">
+        <div class="col bleu">1</div>
+        <div class="col vert">2</div>
+        <div class="col orange">3</div>
+      </div>
+    </div>
+
+    <h3>Colonnes avec largeur définie</h3>
+    <p>
+      Les colonnes de classe .col-{1 à 12} permettent de définir une largeur
+      mais ne possedent toujours pas de comportement responsive
+    </p>
+
+    <div class="container contour">
+      <div class="row">
+        <div class="col-3 bleu">1</div>
+        <div class="col-8 vert">2</div>
+        <div class="col-1 orange">3</div>
+      </div>
+    </div>
+
+    <h3>Colonnes avec breakpoint</h3>
+    <p>
+      les colonnes de classe .col-{breakpoint} elles sont renseignées en terme
+      de responsive
+    </p>
+
+    <div class="container contour">
+      <div class="row">
+        <div class="col-md bleu">1</div>
+        <div class="col-md vert">2</div>
+      </div>
+    </div>
+
+    <h3>Colonnes avec largeur et responsive</h3>
+    <p>Colonnes de classe .col-{breakpoint}-{taille}</p>
+
+    <div class="container contour">
+      <div class="row">
+        <div class="col-12 col-sm-3 col-md-4 col-lg-6 bleu">1</div>
+        <div class="col-12 col-sm-9 col-md-8 col-lg-6 vert">2</div>
+      </div>
+    </div>
+
+    <h3>Colonnes imbriquées</h3>
+    <p>
+      On peut imbriquer un jeu de colonne à l'interieure d'une autre colonne en
+      y placant un element .row et des colonnes à l'interieur
+    </p>
+
+    <div class="container contour">
+      <div class="row">
+        <div class="col-md-5 bleu">1</div>
+        <div class="col-md-5 offset-md-2 vert">2</div>
+      </div>
+    </div>
+
+    <h4>Exemple concret</h4>
+
+    <div id="exemple">
+      <header>
+        <div class="container contour">
+          <div class="row">
+            <div id="logo" class="bleu col-md-4">LOGO</div>
+            <nav id="menu" class="vert col-md-8">MENU</nav>
+          </div>
+        </div>
+      </header>
+      <main class="container contour">
+        <div class="row">
+          <aside class="col-lg-3 rouge">Colonne</aside>
+          <article class="col-lg-9 vert">Article</article>
+        </div>
+      </main>
+      <footer class="container">
+        <div class="row">
+          <div class="col">footer</div>
+          <div class="col">footer</div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
